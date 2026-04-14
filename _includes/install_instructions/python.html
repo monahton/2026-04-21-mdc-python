@@ -51,7 +51,7 @@ https://jupyter-notebook.readthedocs.io/en/stable/notebook.html#browser-compatib
             <summary><strong>Before you start:</strong> Issues relating to OneDrive</summary>
             <div class="alert alert-warning">
                 OneDrive is used by many institutions to sync your user folder (<code>C:\Users\[your-username]\</code>) within an organisation.
-                It may cause issues with the installation of the Carpentries environment.<br/>
+                It may cause issues with the installation of the Trinobia environment.<br/>
                 If you have OneDrive set up, please ensure that you can access your <code>C:\Users\[your-username]\Downloads</code> folder:
                 <p>
                   <ul>
@@ -73,21 +73,21 @@ https://jupyter-notebook.readthedocs.io/en/stable/notebook.html#browser-compatib
             <li>If you get a "Windows protected your PC" pop-up from Microsoft Defender SmartScreen, click on "More info" and select "Run anyway"</li>
           </ul>
           <li>Follow through the installer using all of the defaults for installation <em>except</em> make sure to check <strong>Add Miniforge3 to my PATH environment variable</strong>.</li>
-	        {% comment %}
-	        <li>Search for the application "Miniforge Prompt", open it and run: <code>conda install jupyter</code> and click <kbd>Enter</kbd> when asked for confirmation.</li>
-	            if we want to add an icon, it can be done with:
-	            https://medium.com/@kostal91/create-a-desktop-shortcut-for-jupyterlab-on-windows-9fcabcfa0d3f - easier and more convenient using %userprofile% variable rather than users\%username%
-	            and need to update miniconda for miniforge
-	            Also, the https://pypi.org/project/start-jupyter-cm/ could be helpful.
-	        {% endcomment %}
+          {% comment %}
+          <li>Search for the application "Miniforge Prompt", open it and run: <code>conda install jupyter</code> and click <kbd>Enter</kbd> when asked for confirmation.</li>
+              if we want to add an icon, it can be done with:
+              https://medium.com/@kostal91/create-a-desktop-shortcut-for-jupyterlab-on-windows-9fcabcfa0d3f - easier and more convenient using %userprofile% variable rather than users\%username%
+              and need to update miniconda for miniforge
+              Also, the https://pypi.org/project/start-jupyter-cm/ could be helpful.
+          {% endcomment %}
           <li>Then:
             <ul>
               <li><strong>EITHER</strong>:
                 <ul>
-                  <li>Right click the following link and click "Save link as...": <a href="https://raw.githubusercontent.com/carpentries/workshop-template/refs/heads/gh-pages/data/carpentries_environment.yml">Carpentries environment file</a></li>
+                  <li>Right click the following link and click "Save link as...": <a href="https://github.com/monahton/workshops-data/raw/refs/heads/main/scRNAseq-workshop-data/trinobia_environment.yml">Trinobia environment file</a></li>
                   <li>Save the file to your <code>C:\Users\[your-username]\Downloads</code> folder.</li>
                   <li>
-                    Make sure that the filename is <code>carpentries_environment.yml</code> and the "Save as type" option is set to <code>YML file (*.yml)</code><br/>
+                    Make sure that the filename is <code>trinobia_environment.yml</code> and the "Save as type" option is set to <code>YML file (*.yml)</code><br/>
                     <em>The following steps requires using the Miniforge Prompt command line. If you aren't comfortable doing the installation yourself stop here and request help at the workshop</em>.
                   </li>
                 </ul>
@@ -96,7 +96,7 @@ https://jupyter-notebook.readthedocs.io/en/stable/notebook.html#browser-compatib
                 <ul>
                   <li>Open Git Bash</li>
                   <li><code>cd ~/Downloads</code></li>
-                  <li><code>curl -L -O https://raw.githubusercontent.com/carpentries/workshop-template/refs/heads/gh-pages/data/carpentries_environment.yml</code></li>
+                  <li><code>curl -L -O https://github.com/monahton/workshops-data/raw/refs/heads/main/scRNAseq-workshop-data/trinobia_environment.yml</code></li>
                 </ul>
               </li>
             </ul>
@@ -125,7 +125,7 @@ https://jupyter-notebook.readthedocs.io/en/stable/notebook.html#browser-compatib
           <li>In the Miniforge Prompt window, run the following commands:
             <ul>
               <li>Type <code>cd Downloads</code> and press <kbd>Enter</kbd></li>
-              <li>Type <code>conda env create -f carpentries_environment.yml</code> and press <kbd>Enter</kbd></li>
+              <li>Type <code>conda env create -f trinobia_environment.yml</code> and press <kbd>Enter</kbd></li>
             </ul>
           </li>
           <li>The installation may take a few minutes depending on your internet connection speed. Once complete, you can close the Miniforge Prompt window.</li>
@@ -135,8 +135,8 @@ https://jupyter-notebook.readthedocs.io/en/stable/notebook.html#browser-compatib
         <ol>
           <li>Open <a href="https://conda-forge.org/download/">https://conda-forge.org/download/</a> with your web browser.</li>
           <li>Download the appropriate Miniforge installer for macOS<br>
-	          <em>The following steps require using the shell. If you aren't comfortable doing the installation yourself stop here and request help at the workshop</em>.
-	      </li>
+            <em>The following steps require using the shell. If you aren't comfortable doing the installation yourself stop here and request help at the workshop</em>.
+        </li>
           <li>
             Open a terminal window and navigate to the directory where the executable is downloaded (e.g., <code>cd ~/Downloads</code>).
           </li>
@@ -157,21 +157,21 @@ https://jupyter-notebook.readthedocs.io/en/stable/notebook.html#browser-compatib
             <ul>
               <li><strong>EITHER</strong>:
                 <ul>
-                  <li>Right click the following link and click "Save link as...": <a href="https://raw.githubusercontent.com/carpentries/workshop-template/refs/heads/gh-pages/data/carpentries_environment.yml">Carpentries environment file</a></li>
+                  <li>Right click the following link and click "Save link as...": <a href="https://github.com/monahton/workshops-data/raw/refs/heads/main/scRNAseq-workshop-data/trinobia_environment.yml">Trinobia environment file</a></li>
                   <li>Save the file to your <code>Downloads</code> folder.</li>
-                  <li>Make sure that the filename is <code>carpentries_environment.yml</code> and the "Save as type" is set to <code>YML file (*.yml)</code></li>
+                  <li>Make sure that the filename is <code>trinobia_environment.yml</code> and the "Save as type" is set to <code>YML file (*.yml)</code></li>
                 </ul>
               </li>
               <li><strong>OR </strong>:
                 <ul>
                   <li>Open your `bash` terminal</li>
                   <li><code>cd ~/Downloads</code></li>
-                  <li><code>curl -L -O https://raw.githubusercontent.com/carpentries/workshop-template/refs/heads/gh-pages/data/carpentries_environment.yml</code></li>
+                  <li><code>curl -L -O curl -L -O https://github.com/monahton/workshops-data/raw/refs/heads/main/scRNAseq-workshop-data/trinobia_environment.yml</code></li>
                 </ul>
               </li>
             </ul>
           </li>
-  	      <li>In the terminal, run: <code>conda env create -f ~/Downloads/carpentries_environment.yml</code></li>
+          <li>In the terminal, run: <code>conda env create -f ~/Downloads/trinobia_environment.yml</code></li>
           <li>Close the terminal window.</li>
         </ol>
       </article>
@@ -179,8 +179,8 @@ https://jupyter-notebook.readthedocs.io/en/stable/notebook.html#browser-compatib
         <ol>
           <li>Open <a href="https://conda-forge.org/download/">https://conda-forge.org/download/</a> with your web browser.</li>
           <li>Download the appropriate Miniforge installer for Linux<br>
-	          <em>The following steps require using the shell. If you aren't comfortable doing the installation yourself stop here and request help at the workshop</em>.
-	      </li>
+            <em>The following steps require using the shell. If you aren't comfortable doing the installation yourself stop here and request help at the workshop</em>.
+        </li>
           <li>
             Open a terminal window and navigate to the directory where the executable is downloaded (e.g., <code>cd ~/Downloads</code>).
           </li>
@@ -202,21 +202,21 @@ https://jupyter-notebook.readthedocs.io/en/stable/notebook.html#browser-compatib
             <ul>
               <li><strong>EITHER</strong>:
                 <ul>
-                  <li>Right click the following link and click "Save link as...": <a href="https://raw.githubusercontent.com/carpentries/workshop-template/refs/heads/gh-pages/data/carpentries_environment.yml">Carpentries environment file</a></li>
+                  <li>Right click the following link and click "Save link as...": <a href="https://github.com/monahton/workshops-data/raw/refs/heads/main/scRNAseq-workshop-data/trinobia_environment.yml">Trinobia environment file</a></li>
                   <li>Save the file to your <code>Downloads</code> folder.</li>
-                  <li>Make sure that the filename is <code>carpentries_environment.yml</code> and the "Save as type" is set to <code>YML file (*.yml)</code></li>
+                  <li>Make sure that the filename is <code>trinobia_environment.yml</code> and the "Save as type" is set to <code>YML file (*.yml)</code></li>
                 </ul>
               </li>
               <li><strong>OR </strong>:
                 <ul>
                   <li>Open your terminal</li>
                   <li><code>cd ~/Downloads</code></li>
-                  <li><code>curl -L -O https://raw.githubusercontent.com/carpentries/workshop-template/refs/heads/gh-pages/data/carpentries_environment.yml</code></li>
+                  <li><code>curl -L -O https://github.com/monahton/workshops-data/raw/refs/heads/main/scRNAseq-workshop-data/trinobia_environment.yml</code></li>
                 </ul>
               </li>
             </ul>
           </li>
-	        <li>In the terminal, run: <code>conda env create -f ~/Downloads/carpentries_environment.yml</code></li>
+          <li>In the terminal, run: <code>conda env create -f ~/Downloads/trinobia_environment.yml</code></li>
           <li>Close the terminal window.</li>
         </ol>
       </article>
